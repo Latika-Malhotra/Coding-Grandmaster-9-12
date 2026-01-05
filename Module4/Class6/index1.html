@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="one">Welcome</h1>
+    <p>This is the welcome message.</p>
+
+    <h2>Technology</h2>
+    <p>This is the technology section.</p>
+
+    <script>
+        // Accessing content using DOM
+        var text = document.getElementById("one").innerHTML;
+        alert("The first heading is: " + text);
+    </script>
+
+</body>
+
+</html>

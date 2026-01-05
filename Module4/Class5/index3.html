@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Functions</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Functions</h2>
+    <p>Do a calculation and then display the result.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // Function to add two numbers
+        function add(a, b) {
+            return a + b;
+        }
+
+        // Function to calculate average
+        function average(a, b) {
+            return add(a, b) / 2;
+        }
+
+        let result = average(10, 20);
+
+        document.getElementById("demo").innerHTML =
+            "Average is: " + result;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript DOM Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HTML Elements -->
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+
+    <!-- JavaScript -->
+    <script>
+        // Updating heading text
+        document.getElementById("myH").innerHTML = "JavaScript Comments";
+
+        // Updating paragraph text
+        document.getElementById("myP").innerHTML = "My first paragraph.";
+    </script>
+
+</body>
+
+</html>

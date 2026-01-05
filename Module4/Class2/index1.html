@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Function Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="myFunction(5)">Execute JS function</button>
+
+    <p id="output"></p>
+
+    <script>
+        function myFunction(x, y) {
+            // If y is not passed, assign default value
+            if (y === undefined) {
+                y = 2;
+            }
+
+            // Display result
+            document.getElementById("output").innerHTML =
+                "Result: " + (x * y);
+        }
+    </script>
+
+</body>
+
+</html>

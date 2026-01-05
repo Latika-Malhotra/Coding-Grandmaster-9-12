@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Variable Scope</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        button {
+            padding: 8px 14px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .result {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>A function can access variables defined inside the function:</p>
+
+    <button type="button" onclick="myFunction()">Click Me</button>
+
+    <p id="demo1" class="result"></p>
+    <p id="demo" class="result"></p>
+
+    <script>
+        // Global variable
+        var b = 5;
+
+        function myFunction() {
+            // Local variable
+            var a = 4;
+
+            // Can access both local (a) and global (b)
+            document.getElementById("demo").innerHTML =
+                "Multiplication (a × b): " + (a * b);
+        }
+
+        // Can access global variable
+        document.getElementById("demo1").innerHTML =
+            "Global variable b value: " + b;
+    </script>
+
+</body>
+
+</html>
