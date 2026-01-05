@@ -1,0 +1,62 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    background: white;
+    width: 70%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+/* Class selector */
+.highlight {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+/* Descendant selector */
+.box p {
+    color: blue;
+}
+
+/* Child selector */
+.parent>p {
+    color: red;
+    font-weight: bold;
+}
+
+/* Pseudo-class */
+.activity-link {
+    text-decoration: none;
+    color: purple;
+}
+
+.activity-link:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+/* Pseudo-class :hover */
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Pseudo-elements */
+.note::before {
+    content: "👉 ";
+}
+
+.note::after {
+    content: " ✔";
+    color: green;
+}
