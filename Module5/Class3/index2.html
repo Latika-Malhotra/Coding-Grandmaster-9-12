@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Array map()</h2>
+    <p>Multiply each element by 10:</p>
+
+    <p id="product"></p>
+
+    <script>
+        // Original array
+        let numbers = [28, 6, 19, 95];
+
+        // Function to multiply a number by 10
+        function multiplyByTen(value) {
+            return value * 10;
+        }
+
+        // Apply map() to array
+        let newArray = numbers.map(multiplyByTen);
+
+        // Display result
+        document.getElementById("product").innerHTML = newArray;
+    </script>
+
+</body>
+
+</html>

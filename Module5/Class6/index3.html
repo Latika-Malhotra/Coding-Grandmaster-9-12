@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Calculator</title>
+
+    <!-- Link CSS -->
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+.calculator {
+    width: 300px;
+    margin: 30px auto;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#result {
+    width: 100%;
+    height: 50px;
+    font-size: 22px;
+    text-align: right;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+button {
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.clear {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.operator {
+    background-color: #f39c12;
+    color: white;
+}
+
+.equal {
+    background-color: #2ecc71;
+    color: white;
+    grid-row: span 2;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <h2>JavaScript Calculator</h2>
+
+    <div class="calculator">
+        <!-- Display Screen -->
+        <input type="text" id="result" readonly>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button onclick="clearScreen()" class="clear">C</button>
+            <button onclick="setScreenValue('/')">/</button>
+            <button onclick="setScreenValue('*')">*</button>
+            <button onclick="setScreenValue('-')">-</button>
+
+            <button onclick="setScreenValue('7')">7</button>
+            <button onclick="setScreenValue('8')">8</button>
+            <button onclick="setScreenValue('9')">9</button>
+            <button onclick="setScreenValue('+')" class="operator">+</button>
+
+            <button onclick="setScreenValue('4')">4</button>
+            <button onclick="setScreenValue('5')">5</button>
+            <button onclick="setScreenValue('6')">6</button>
+            <button onclick="calculateResult()" class="equal">=</button>
+
+            <button onclick="setScreenValue('1')">1</button>
+            <button onclick="setScreenValue('2')">2</button>
+            <button onclick="setScreenValue('3')">3</button>
+
+            <button onclick="setScreenValue('0')" class="zero">0</button>
+            <button onclick="setScreenValue('.')">.</button>
+        </div>
+    </div>
+
+    <!-- Link JavaScript -->
+    <script>
+        // Clears the calculator screen
+            function clearScreen() {
+                document.getElementById("result").value = "";
+            }
+
+            // Appends the clicked button value to the display
+            function setScreenValue(value) {
+                document.getElementById("result").value += value;
+            }
+
+            // Calculates and displays the result
+            function calculateResult() {
+                const screen = document.getElementById("result");
+                const expression = screen.value.trim();
+
+                // Check if input is empty
+                if (expression === "") {
+                    screen.value = "Enter expression";
+                    return;
+                }
+
+                // Evaluate expression safely
+                try {
+                    screen.value = eval(expression);
+                } catch (error) {
+                    screen.value = "Invalid Expression";
+                }
+            }
+
+    </script>
+
+</body>
+
+</html>

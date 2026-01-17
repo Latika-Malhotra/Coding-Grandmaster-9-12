@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript eval() Example</h2>
+    <p>Click the button to evaluate expressions:</p>
+
+    <button onclick="calculate()">Try it</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            let x = 10;
+            let y = 20;
+
+            // Evaluate expressions
+            let result1 = eval("x + y") + "<br>";
+            let result2 = eval("y * 2") + "<br>";
+            let result3 = eval("y - x") + "<br>";
+
+            // Combine results
+            let finalResult = result1 + result2 + result3;
+
+            // Display output
+            document.getElementById("result").innerHTML = finalResult;
+        }
+    </script>
+
+</body>
+
+</html>

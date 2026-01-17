@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>The JavaScript String() Method</h2>
+    <p>Convert numbers into strings</p>
+
+    <p id="number_result"></p>
+    <p id="string_result"></p>
+
+    <script>
+        // Declare two number variables
+        let x = 70;
+        let y = 90;
+
+        // Normal addition (number + number)
+        document.getElementById("number_result").innerHTML =
+            "Number addition result: " + (x + y);
+
+        // Convert numbers to string before adding
+        document.getElementById("string_result").innerHTML =
+            "String concatenation result: " + String(x) + String(y);
+    </script>
+
+</body>
+
+</html>

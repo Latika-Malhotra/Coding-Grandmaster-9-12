@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Greeting Program</title>
+</head>
+
+<body>
+
+    <h2>Click the button to get a greeting</h2>
+
+    <button onclick="showGreeting()">Try it</button>
+
+    <p id="hour"></p>
+    <p id="greet"></p>
+
+    <script>
+        function showGreeting() {
+            // Get current hour
+            let hour = new Date().getHours();
+            let greeting;
+
+            // Decide greeting based on time
+            if (hour < 12) {
+                greeting = "Good Morning 🌅";
+            }
+            else if (hour < 18) {
+                greeting = "Good Afternoon ☀️";
+            }
+            else {
+                greeting = "Good Evening 🌙";
+            }
+
+            // Display results
+            document.getElementById("hour").innerHTML =
+                "Current Hour is: " + hour;
+
+            document.getElementById("greet").innerHTML =
+                greeting;
+        }
+    </script>
+
+</body>
+
+</html>

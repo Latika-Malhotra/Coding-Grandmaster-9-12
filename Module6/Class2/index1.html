@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <style> 
+        body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+}
+
+.about {
+    background-color: #1c1c1c;
+}
+
+.m-heading {
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+button {
+    margin-top: 15px;
+}
+
+    </style>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/996973c893.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Roboto&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <div id="about" class="container about p-5">
+        <div class="row">
+
+            <!-- Image Column -->
+            <div class="col-6">
+                <img src="about_img.svg" class="img-fluid" alt="About Image">
+            </div>
+
+            <!-- Content Column -->
+            <div class="col-6 pl-5 pt-5 pb-5 text-white">
+
+                <h3 class="text-warning">About Codingal</h3>
+                <h1 class="m-heading">A little bit about me</h1>
+
+                <p>
+                    <b class="text-warning">Codingal</b> is on a mission to inspire school kids
+                    to <b class="text-warning">fall in love with coding</b>.
+                    Coding helps develop logical thinking and problem-solving skills.
+                </p>
+
+                <p id="extraContent" class="d-none">
+                    In today’s age, <b class="text-warning">coding</b> has become an essential skill.
+                    It improves cognitive development, logical thinking, and creativity.
+                    Coding prepares children for future careers in technology.
+                </p>
+
+                <button class="btn btn-outline-warning" onclick="toggleContent()">
+                    Learn More
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Function to show or hide extra content
+            function toggleContent() {
+                const content = document.getElementById("extraContent");
+                const button = event.target;
+
+                if (content.classList.contains("d-none")) {
+                    content.classList.remove("d-none");
+                    button.innerText = "Show Less";
+                } else {
+                    content.classList.add("d-none");
+                    button.innerText = "Learn More";
+                }
+            }
+
+    </script>
+
+</body>
+
+</html>

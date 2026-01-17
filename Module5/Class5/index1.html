@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript JSON Example</h2>
+    <p id="result"></p>
+
+    <script>
+        // Create a JavaScript object
+        let student = {
+            name: "Riya",
+            age: 12,
+            grade: 7
+        };
+
+        // Convert JavaScript object to JSON string
+        let jsonData = JSON.stringify(student);
+
+        // Convert JSON string back to JavaScript object
+        let newStudent = JSON.parse(jsonData);
+
+        // Display result
+        document.getElementById("result").innerHTML =
+            "Student Name: " + newStudent.name;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <Style>
+        body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+}
+
+#social-media {
+    background-color: #1c1c1c;
+}
+
+.m-heading {
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.media-link {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.media-link:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+    </Style>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/996973c893.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;600;700&family=Roboto&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= SOCIAL MEDIA SECTION ================= -->
+    <div id="social-media" class="container-fluid">
+
+        <div class="container text-white py-5">
+            <h4 class="text-warning">Social Media</h4>
+            <h1 class="m-heading">Let's be friends</h1>
+
+            <div class="row pt-5">
+
+                <!-- LinkedIn -->
+                <div class="col-3 media-link btn btn-outline-primary" onclick="openLinkedIn()">
+                    <div class="row">
+                        <div class="col-6 d-flex justify-content-start">
+                            <h3 class="m-0 pt-2">LinkedIn</h3>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end align-items-center">
+                            <i class="fab fa-linkedin-in fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTube -->
+                <div class="col-3 media-link btn btn-outline-danger" onclick="openYouTube()">
+                    <div class="row">
+                        <div class="col-6 d-flex justify-content-start">
+                            <h3 class="m-0 pt-2">YouTube</h3>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end align-items-center">
+                            <i class="fab fa-youtube fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-3 media-link btn btn-outline-warning" onclick="sendEmail()">
+                    <div class="row">
+                        <div class="col-6 d-flex justify-content-start">
+                            <h3 class="m-0 pt-2">Email</h3>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end align-items-center">
+                            <i class="fas fa-envelope fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function openLinkedIn() {
+                window.open("https://www.linkedin.com", "_blank");
+            }
+
+            function openYouTube() {
+                window.open("https://www.youtube.com", "_blank");
+            }
+
+            function sendEmail() {
+                window.location.href = "mailto:example@email.com";
+            }
+
+    </script>
+
+</body>
+
+</html>
